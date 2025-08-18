@@ -6,7 +6,7 @@ CREATE TABLE "Video" (
     "publicId" TEXT NOT NULL,
     "originalSize" TEXT NOT NULL,
     "compressedSize" TEXT NOT NULL,
-    "duration" TEXT NOT NULL,
+    "duration" DOUBLE PRECISION NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
 
