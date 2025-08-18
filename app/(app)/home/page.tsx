@@ -1,12 +1,16 @@
 "use client";
 import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
+import { useAuth } from "@clerk/nextjs";
+import { useRouter } from "next/navigation";
 import VideoCard from "@/components/VideoCard";
 import { Video } from "@/types";
 function Home() {
   const [videos, setVideos] = useState<Video[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const { isLoaded, userId } = useAuth();
+  const router = useRouter();
 
   const fetchVideos = useCallback(async () => {
     try {
@@ -40,6 +44,9 @@ function Home() {
     };
   }, []);
 
+  if (!userId) {
+    router.push("/sign-in");
+  }
   if (loading) {
     return <div>Loading...</div>;
   }
