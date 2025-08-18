@@ -16,7 +16,7 @@ UI.</p>
 | **Layer**     | **Technologies**                     |
 |---------------|--------------------------------------|
 | **Frontend**  | Next.js, Tailwind CSS, Daisy UI      |
-| **Backend**   | Next.js API Routes, Prisma ORM       |
+| **Backend**   | Next.js API Routes, Prisma ORM, Clerk|
 | **Database**  | NeonDB (PostgreSQL in the cloud)     |
 | **Media**     | Cloudinary for image uploads         |
 | **Styling**   | Tailwind CSS + Daisy UI              |
